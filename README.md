@@ -14,6 +14,13 @@
                 # run terminal
                 source exports.sh
 
+### Edit seeds to store your portfolio sections and user
+
+                # /db/seeds.rb
+                sections = [{title: 'Projects'},{title:  'Docs'},{title: 'Videos'},{title: 'Contact'}]
+                email =  'admin@admin.com'
+                user = {email: email, password: 'admin123456'}
+
 ### Initialize the database if you haven't already
 
                 # run terminal
