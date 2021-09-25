@@ -3,7 +3,7 @@ class SectionsController < ApplicationController
 
   # GET /sections or /sections.json
   def index
-    @sections = Section.all
+    #@sections = Section.all - transfered to Application Controller, before action method
   end
 
   # GET /sections/1 or /sections/1.json

@@ -6,8 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Define your section title
 sections = [{title: 'Projects'},{title:  'Docs'},{title: 'Videos'},{title: 'Contact'}]
 
-sections.each do |section|
-    Section.create(section)
+# Only create sections if the first section (Project in my case) dont exists
+unless Section.find_by(sections[0])
+
+    # For each section in sections, store section in database
+    sections.each do |section|
+        Section.create(section)
+    end
+
 end

@@ -10,6 +10,98 @@
   </head>
 
   <body>
+    <header id="header" class="fixed-top d-flex align-items-center">
+
+      <!--- Logo ---->
+      <h1 class="logo me-auto me-lg-0">
+
+        <a href="/" id="title-header" style="margin-left: 10px;">JesusGautamah</a>
+
+      </h1>
+
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+   
+        <nav id="navbar" class="navbar order-last order-lg-0">
+
+          <ul>
+            <li><a class="nav-link" href="/">Home</a></li>         
+          </ul>
+
+          <% @sections.each do |section| %>
+
+            <ul>
+              <li><a class="nav-link" href="/"><%= section.title %></a></li>         
+            </ul>
+            
+          <% end %>
+          <ul>
+          <li class="dropdown >"><a href="/"><span>GitHub</span></a>
+
+              <ul>
+
+            
+                
+
+
+                <!--- GitHub Card ---->
+
+                  
+                  <div class="github-card" data-github="JesusGautamah" data-width="300" data-height="170" data-theme="default"></div>
+                  <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+
+                
+              </ul>
+            </li>
+            </ul>
+
+
+        </nav>  
+
+      </div>
+
+    </header>
+
+    <section class="hero" id="hero">
+
+      <div class="container text-center">
+
+        <div class="row">
+        
+          <div class="col text-center" >
+          <div class="col-md-12" style="width: 400px; border:solid 1px; background-color: rgba(255,255,255, 0.3); ;border: rgba(225,255,255, 1) 2px ;  border-radius: 20px;margin-left:20px;" >
+            <br>
+            <%= image_tag "gg.jpg", style: "width: 160px; height:auto; border-radius: 160px;" %>
+            <br>
+            <br>
+            <h1 style="color: #000; font-size: 30px;"> Jesus Gautamah </h1>
+            <h1 style="color: #000; font-size: 30px;"> Welcome to my portfolio </h1>
+            <br>
+
+    
+          </div>
+          </div>
+          <div class="col text-center"  >
+          <div class="col-md-12" style="width: 400px; background-color: rgba(255,255,255, 0.3); border-radius: 20px;margin-left:120px;" >
+            
+            <br>
+            <%= image_tag "code.png", style: "width: 160px; height:auto; " %>
+            <br>
+            <br>
+            <h1 style="color: #000; font-size: 30px;"> Last Project </h1>
+            <br>
+
+    
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+      
+
     <%= yield %>
+
   </body>
 </html>
