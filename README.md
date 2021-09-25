@@ -34,7 +34,7 @@
                 # run terminal, create tables from /db/migrate to db
                 rake db:migrate
 
-                # run terminal, store informations from /db/seed
+                # run terminal, store informations from /db/seeds.rb
                 rake db:seed
 
 
