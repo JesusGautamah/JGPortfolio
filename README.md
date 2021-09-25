@@ -23,8 +23,20 @@
 
 ### Initialize the database if you haven't already
 
-                # run terminal
+                # run terminal , this creates db, migrate and stores information from  /db/seeds.rb
                 rake db:setup
+
+### Initialize the database (other way)
+
+                # run terminal, create db
+                rake db:create
+
+                # run terminal, create tables from /db/migrate to db
+                rake db:migrate
+
+                # run terminal, store informations from /db/seed
+                rake db:seed
+
 
 ### Now initialize Rails Server
 
