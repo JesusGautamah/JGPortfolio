@@ -8,6 +8,9 @@
 
 # Define your section title
 sections = [{title: 'Projects'},{title:  'Docs'},{title: 'Videos'},{title: 'Contact'}]
+email =  'admin@admin.com'
+user = {email: email, password: 'admin123456'}
+
 
 # Only create sections if the first section (Project in my case) dont exists
 unless Section.find_by(sections[0])
@@ -17,4 +20,9 @@ unless Section.find_by(sections[0])
         Section.create(section)
     end
 
+end
+
+unless User.find_by(email: email)
+    User.create(user)
+    puts("User Created!")
 end
