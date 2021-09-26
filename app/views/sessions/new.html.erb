@@ -1,5 +1,6 @@
 
-
+<div class="container border-gradient border-gradient-purple text-center" id="main-col" >
+<span style="font-size: 40px; color: red;"> Restricted </span>
 <%= form_for :session, url: sign_in_path do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -10,8 +11,12 @@
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
+
   <div class="actions">
-    <%= f.submit "Log in" %>
+
+    <%= button_to "Log in", sign_in_path(), params:[email: :email, password: :password], class: "portfolio-btnn" %>
+
   </div>
 
 <% end %>
+</div>
