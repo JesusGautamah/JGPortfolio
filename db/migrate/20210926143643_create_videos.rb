@@ -4,7 +4,7 @@ class CreateVideos < ActiveRecord::Migration[5.2]
       t.references :project, foreign_key: true
       t.text :title
       t.text :link
-      t.boolean :published. default: false
+      t.boolean :published, default: false
 
       t.timestamps
     end

@@ -6,7 +6,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.text :description
       t.text :content
       t.text :conclusion
-      t.boolean :published. default: false
+      t.boolean :published, :default => false
 
       t.timestamps
     end

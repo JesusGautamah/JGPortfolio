@@ -1,5 +1,6 @@
 class DocsController < ApplicationController
   before_action :set_doc, only: %i[ show edit update destroy ]
+  before_action :authorize
 
   # GET /docs or /docs.json
   def index

@@ -10,7 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_25_212426) do
+ActiveRecord::Schema.define(version: 2021_09_26_143643) do
+
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "project_id"
+    t.text "title"
+    t.text "description"
+    t.text "content"
+    t.text "conclusion"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_articles_on_project_id"
+  end
+
+  create_table "docs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "project_id"
+    t.string "link"
+    t.string "title"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_docs_on_project_id"
+  end
+
+  create_table "git_repostories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "project_id"
+    t.string "link"
+    t.string "title"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_git_repostories_on_project_id"
+  end
+
+  create_table "projects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "title"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
+  end
 
   create_table "sections", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "title"
@@ -25,4 +66,19 @@ ActiveRecord::Schema.define(version: 2021_09_25_212426) do
     t.string "password_digest"
   end
 
+  create_table "videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "project_id"
+    t.text "title"
+    t.text "link"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_videos_on_project_id"
+  end
+
+  add_foreign_key "articles", "projects"
+  add_foreign_key "docs", "projects"
+  add_foreign_key "git_repostories", "projects"
+  add_foreign_key "projects", "users"
+  add_foreign_key "videos", "projects"
 end

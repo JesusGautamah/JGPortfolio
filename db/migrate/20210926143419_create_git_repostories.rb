@@ -4,7 +4,7 @@ class CreateGitRepostories < ActiveRecord::Migration[5.2]
       t.references :project, foreign_key: true
       t.string :link
       t.string :title
-      t.boolean :published. default: false
+      t.boolean :published, default: false
 
 
       t.timestamps

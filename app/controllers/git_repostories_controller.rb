@@ -1,5 +1,6 @@
 class GitRepostoriesController < ApplicationController
   before_action :set_git_repostory, only: %i[ show edit update destroy ]
+  before_action :authorize
 
   # GET /git_repostories or /git_repostories.json
   def index
