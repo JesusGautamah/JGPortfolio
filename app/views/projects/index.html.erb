@@ -2,6 +2,11 @@
   <div class="container border-gradient border-gradient-purple text-center " id="main-col" style="padding: 50px;">
 <h1>Projects</h1>
 <br>
+<div id="new-project">
+  <%= link_to 'New Project', new_project_path, class:"portfolio-btn", remote: true %>
+</div>
+
+<br>
 <br>
 
     <% @projects.each do |project| %>
@@ -18,7 +23,5 @@
   
 
 <br>
-<div id="new-project">
-  <%= link_to 'New Project', new_project_path, remote: true %>
-</div>
+
 </div>
