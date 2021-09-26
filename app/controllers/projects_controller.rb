@@ -14,6 +14,9 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /projects/1/edit
@@ -23,11 +26,14 @@ class ProjectsController < ApplicationController
   # POST /projects or /projects.json
   def create
     @project = Project.new(project_params)
+    @project.user = current_user
 
     respond_to do |format|
       if @project.save
+        @projects = Project.all
         format.html { redirect_to @project, notice: "Project was successfully created." }
         format.json { render :show, status: :created, location: @project }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @project.errors, status: :unprocessable_entity }

@@ -1,29 +1,24 @@
 <p id="notice"><%= notice %></p>
-
+  <div class="container border-gradient border-gradient-purple text-center " id="main-col" style="padding: 50px;">
 <h1>Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.user %></td>
-        <td><%= project.title %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<br>
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+    <% @projects.each do |project| %>
+      <div class="border-gradient border-gradient-purple text-center" id="hero-col" style="width: 50%; margin: 0 auto;" >
+        <h6><%= project.user %></h1>
+        <h6><%= project.title %></h1>
+        <h6><%= link_to 'Show', project %></h1>
+        <h6><%= link_to 'Edit', edit_project_path(project) %></h1>
+        <h6><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></h1>
+      </div>
+      <br>
+      <br>
+    <% end %>
+  
+
+<br>
+<div id="new-project">
+  <%= link_to 'New Project', new_project_path, remote: true %>
+</div>
+</div>
