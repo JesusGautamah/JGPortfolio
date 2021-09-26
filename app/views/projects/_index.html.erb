@@ -2,13 +2,15 @@
 <h1>Projects</h1>
 
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.user %></td>
-        <td><%= project.title %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="border-gradient border-gradient-purple text-center" id="hero-col" style="width: 50%; margin: 0 auto;" >
+        <h6><%= project.user %></h1>
+        <h6><%= project.title %></h1>
+        <h6><%= link_to 'Show', project %></h1>
+        <h6><%= link_to 'Edit', edit_project_path(project) %></h1>
+        <h6><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></h1>
+      </div>
+      <br>
+      <br>
     <% end %>
   
 
