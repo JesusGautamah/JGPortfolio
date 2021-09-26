@@ -57,6 +57,16 @@
   }
 
 
+  @media screen and (max-width: 1000px) {
+
+    #hero-row {
+      margin: 0 auto;
+    }
+
+  }
+
+
+
 
   @media screen and (max-height: 450px) {
 
@@ -70,15 +80,34 @@
   /*custooom*/
 
 
+  canvas {
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+
+
     body {
-      
-      background: #6D7993;
-      font-family: "Open Sans", sans-serif;
-      color: #fff;
-      zoom: 90%;
-
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
     }
-
+    
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    
 
     .sidenav {
 
@@ -98,6 +127,8 @@
     border-radius: 15px;
 
     }
+
+    
 
     .progress-margin {
       margin-left: 100px;
@@ -167,6 +198,59 @@
     .sidenav a:hover {
 
       color: #064579;
+
+    }
+
+    .border-gradient {
+
+      border: 2px solid;
+      border-image-slice: 1;
+      border-width: 2px;
+      
+      
+    }
+
+    .border-gradient-purple {
+      border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+      
+    }
+
+
+    #hero-col {
+
+      background-color: rgba(0,0,0, 0.5);
+      margin: 0 auto;
+      color: white;
+      
+
+    }
+
+    
+    #hero-col:hover {
+
+      background-color: rgba(255,255,255, 0.5);
+      padding: 55px 15px  ;
+      box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+      background-image: linear-gradient(to left, #743ad5, #d53a9d);
+      
+
+    }
+
+    #main-col {
+
+      background-color: rgba(0,0,0, 0.9);
+      margin: 0 auto;
+      color: white;
+      
+
+    }
+
+    #main-col:hover {
+
+      background-color: rgba(255,255,255, 0.5);
+      padding: 55px 15px  ;
+      box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+      background-image: linear-gradient(to left, #743ad5, #d53a9d);
 
     }
 
@@ -360,7 +444,7 @@
     # Header
     --------------------------------------------------------------*/
     #header {
-      background: rgba(12, 11, 9, 0.6);
+      background: rgba(255, 255, 255, 1);
       border-bottom: 1px solid rgba(12, 11, 9, 0.6);
       transition: all 0.5s;
       z-index: 997;
@@ -400,7 +484,10 @@
     }
 
     #header .logo a {
-      color: #fff;
+      
+      background: -webkit-linear-gradient(#6D7993, purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     #header .logo img {
@@ -479,7 +566,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px 0 10px 30px;
-      color: #fff;
+      color: #000;
       white-space: nowrap;
       transition: 0.3s;
       font-size: 14px;
@@ -681,8 +768,8 @@
     --------------------------------------------------------------*/
     #hero {
       width: 100%;
-      height: 80vh;
-      background: url("portfolio.jpeg") top center no-repeat;
+      height: 100vh;
+      background: url("bg2jpeg.jpeg") top center no-repeat;
       background-size: cover;
       position: relative;
       padding: 0;
@@ -723,6 +810,11 @@
       color: #eee;
       margin-bottom: 10px 0 0 0;
       font-size: 22px;
+    }
+
+    #hero h1 {
+      color: #eee;
+      margin-bottom: 10px 0 0 0;
     }
 
     #hero .btns {
@@ -831,6 +923,9 @@
       color: #6D7993;
     }
 
+    #main-content{
+      padding-top: 50px;
+    }
 
 
     /*--------------------------------------------------------------
