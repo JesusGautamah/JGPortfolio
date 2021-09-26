@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
     before_action :init_vars
     protect_from_forgery with: :exception
     include SessionsHelper
+    include Pagy::Backend
 
 
     def init_vars

@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.all
+    @pagy, @projects = pagy(Project.all, max_items: 5)
   end
 
   # GET /projects/1 or /projects/1.json
@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        @projects = Project.all
+        @pagy, @projects = pagy(Project.all)
         format.html { redirect_to @project, notice: "Project was successfully created." }
         format.json { render :show, status: :created, location: @project }
         format.js

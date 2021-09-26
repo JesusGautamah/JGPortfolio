@@ -28,6 +28,8 @@ gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
+# Use Pagy for Pagination
+gem 'pagy'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

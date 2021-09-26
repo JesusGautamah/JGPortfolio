@@ -5,7 +5,7 @@
 <div id="new-project">
   <%= link_to 'New Project', new_project_path, class:"portfolio-btn", remote: true %>
 </div>
-
+<%= pagy_nav(@pagy).html_safe %>
 <br>
 <br>
 
@@ -20,8 +20,10 @@
       <br>
       <br>
     <% end %>
-  
+
+    
 
 <br>
 
 </div>
+
