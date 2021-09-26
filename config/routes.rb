@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
 
+  resources :videos
+  resources :articles
+  resources :docs
+  resources :git_repostories
+  resources :projects
   resources :sections, only: [:index, :show]
 
   get    'sign_in'   => 'sessions#new'

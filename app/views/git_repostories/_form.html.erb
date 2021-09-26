@@ -1,0 +1,32 @@
+<%= form_with(model: git_repostory, local: true) do |form| %>
+  <% if git_repostory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(git_repostory.errors.count, "error") %> prohibited this git_repostory from being saved:</h2>
+
+      <ul>
+      <% git_repostory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

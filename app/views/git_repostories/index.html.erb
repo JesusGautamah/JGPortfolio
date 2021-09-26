@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Git Repostories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Link</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @git_repostories.each do |git_repostory| %>
+      <tr>
+        <td><%= git_repostory.project %></td>
+        <td><%= git_repostory.link %></td>
+        <td><%= git_repostory.title %></td>
+        <td><%= link_to 'Show', git_repostory %></td>
+        <td><%= link_to 'Edit', edit_git_repostory_path(git_repostory) %></td>
+        <td><%= link_to 'Destroy', git_repostory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Git Repostory', new_git_repostory_path %>
