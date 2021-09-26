@@ -18,43 +18,6 @@
  
  @import "bootstrap";
 
-  input[type=search] {
-    width: 600px;
-    border-radius: 50px;
-  }
-
-
-  .sidemenu {
-
-    width: 400px;
-    position: fixed;
-    z-index: 2;
-    top: 300px;
-    left: 06px;
-    padding-left: 10px;
-    margin-left: 700px;
-    color: #6D7993;
-    border-radius: 15px;
-
-  }
-
-
-
-  .sidemenu a {
-
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #2196F3;
-    display: block;
-
-  }
-
-  .sidemenu a:hover {
-
-    color: #064579;
-
-  }
 
 
   @media screen and (max-width: 1000px) {
@@ -67,139 +30,34 @@
 
 
 
-
-  @media screen and (max-height: 450px) {
-
-    .sidemenu {display: block;}
-    .sidemenu a {font-size: 18px;}
-
+  body {
+    background-color: #000;
   }
 
+    
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
 
+    50% {
+      background-position: 100% 50%;
+    }
 
-  /*custooom*/
-
-
-  canvas {
-  
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: black;
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
+  @media (max-width: 990px) {
 
-    body {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      height: 100vh;
-    }
-    
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-    
+      
 
-    .sidenav {
-
-    justify-items: center;
-    justify-content: center;
-    flex-direction:column;
-    margin-top: 100px;
-    width: 700px;
-    height: 90%;
-    position: fixed;
-    z-index: 2;
-    left: 06px;
-    background: rgba(12, 11, 9, 1);
-    top: 0px;
-    overflow: scroll;
-    color: #6D7993;
-    border-radius: 15px;
-
+    header {
+      height: 100px;
     }
 
-    
-
-    .progress-margin {
-      margin-left: 100px;
-    }
-
-    @media (max-width: 990px) {
-
-      .sidenav {
-
-        height: 70%;
-        width: 100%;
-        margin-top: 180px;
-      }
-
-      header {
-        height: 100px;
-      }
-
-      .progress-margin {
-        margin-left: 150px;
-      }
-
-      #hide {
-        font-size: 40px;
-        margin-left: 20px;
-        margin-right: 20px;
-      }
-
-      #nav-toggle {
-        font-size: 40px;
-
-      }
-
-      #title-header {
-        font-size: 60px;
-      }
-    
-    }
-
-    .sidenav-hidden {
-      display: none;
-    }
-
-    .sidenav::-webkit-scrollbar {
-
-      display: none;
-
-    }
-
-    .sidenav {
-
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-
-    }
-
-    .sidenav a {
-
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #2196F3;
-      display: block;
-
-    }
-
-    .sidenav a:hover {
-
-      color: #064579;
-
-    }
+  }  
 
     .border-gradient {
 
@@ -254,13 +112,7 @@
 
     }
 
-    @media screen and (max-height: 450px) {
-
-      .sidenav a {font-size: 18px;}
-      .sidenav {padding-top: 15px;}
-
-    }
-
+   
 
     .box img{
 
@@ -269,78 +121,11 @@
 
     }
 
-    .sidebutton {
-
-      justify-items: center;
-      justify-content: center;
-      flex-direction:column;
-      margin-top: 100px;
-      width: 150px;
-      position: fixed;
-      z-index: 2;
-      top: 20px;
-      left: 06px;
-      padding-left: 0px;
-      background: rgba(12, 11, 9, 0.6);
-      overflow: scroll;
-      color: #6D7993;
-      border-radius: 15px;
-
-    }
-
-    .sidebutton::-webkit-scrollbar {
-
-      display: none;
-
-    }
-
-    .sidebutton {
-
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-
-    }
-
-    .sidebutton a {
-
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #2196F3;
-      display: block;
-
-    }
-
-    .sidebutton a:hover {
-
-      color: #064579;
-
-    }
-
-    @media screen and (max-height: 450px) {
-
-      .sidebutton a {font-size: 18px;}
-      .sidebutton {padding-top: 15px;}
-
-    }
     
-    a {
-
-      color: #6D7993;
-      text-decoration: none;
-
-    }
-
-    a:hover {
-
-      color: #cfc1aa;
-      text-decoration: none;
-
-    }
 
     h1, h2, h3, h4, h5, h6 {
 
-      font-family: "Playfair Display", serif;
+      font-family: Verdana, sans-serif;
 
     }
 
@@ -886,7 +671,11 @@
     }
 
     .section-bg {
-      background-color: #D5D5D5;
+      
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 11s ease infinite;
+      height: 100vh;
     }
 
     .section-title {
@@ -931,6 +720,7 @@
     /*--------------------------------------------------------------
     # main
     --------------------------------------------------------------*/
+
     .main .box  {
       border-radius: 30px;
       box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -942,12 +732,14 @@
       margin-bottom: 15px;
       padding-top: 40px;
     }
+
     .main .box span {
       display: block;
       font-size: 28px;
       font-weight: 700;
       color: #6D7993;
     }
+
     .main .cont{
       width: 1600px;
     }
@@ -1043,11 +835,3 @@
         padding: 15px;
       }
     }
-
-  
-
-
-
-
-
-
