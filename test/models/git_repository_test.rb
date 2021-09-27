@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GitRepostoryTest < ActiveSupport::TestCase
+class GitRepositoryTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

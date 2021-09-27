@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Git Repositories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Link</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @git_repositories.each do |git_repository| %>
+      <tr>
+        <td><%= git_repository.project %></td>
+        <td><%= git_repository.link %></td>
+        <td><%= git_repository.title %></td>
+        <td><%= link_to 'Show', git_repository %></td>
+        <td><%= link_to 'Edit', edit_git_repository_path(git_repository) %></td>
+        <td><%= link_to 'Destroy', git_repository, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Git Repository', new_git_repository_path %>

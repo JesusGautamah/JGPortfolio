@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @git_repository.project %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @git_repository.link %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @git_repository.title %>
+</p>
+
+<%= link_to 'Edit', edit_git_repository_path(@git_repository) %> |
+<%= link_to 'Back', git_repositories_path %>

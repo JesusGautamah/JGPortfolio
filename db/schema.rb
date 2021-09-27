@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_26_143643) do
+ActiveRecord::Schema.define(version: 2021_09_27_021145) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.bigint "project_id"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 2021_09_26_143643) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["project_id"], name: "index_docs_on_project_id"
+  end
+
+  create_table "git_repositories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "project_id"
+    t.string "link"
+    t.string "title"
+    t.boolean "published", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_git_repositories_on_project_id"
   end
 
   create_table "git_repostories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -78,6 +88,7 @@ ActiveRecord::Schema.define(version: 2021_09_26_143643) do
 
   add_foreign_key "articles", "projects"
   add_foreign_key "docs", "projects"
+  add_foreign_key "git_repositories", "projects"
   add_foreign_key "git_repostories", "projects"
   add_foreign_key "projects", "users"
   add_foreign_key "videos", "projects"

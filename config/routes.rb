@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :git_repositories
   resources :videos
   resources :articles
   resources :docs
-  resources :git_repostories
   resources :projects
   resources :sections, only: [:index, :show]
 

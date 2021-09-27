@@ -26,3 +26,11 @@ unless User.find_by(email: email)
     User.create(user)
     puts("User Created!")
 end
+
+unless Project.find_by(title: "apenas um teste")
+
+    50.times do
+        Project.create(title: "apenas um teste", user_id: 1)
+    end
+    
+end
