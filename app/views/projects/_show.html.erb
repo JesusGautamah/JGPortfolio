@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="container border-gradient border-gradient-purple text-center " id="main-col" style="padding: 50px;">
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
+
+<div class="row">
+
+  <div class="col">
+    <%= button_to 'New Article', projects_path, class:"portfolio-btn", method: "get"%>
+  </div>
+  <div class="col">
+    <%= button_to 'Add Git Repository', projects_path, class:"portfolio-btn", method: "get"%>
+  </div>
+  <div class="col">
+    <%= button_to 'Add Doc', projects_path, class:"portfolio-btn", method: "get" %>
+  </div>
+  <div class="col">
+    <%= button_to 'Add Video', projects_path, class:"portfolio-btn", method: "get" %>
+  </div>
+
+
+</div>
+<%= link_to 'Edit', edit_project_path(@project), class:"portfolio-btn", remote: true %> |
+<%= link_to 'Back', projects_path, class:"portfolio-btn", remote: true %>
+</div>

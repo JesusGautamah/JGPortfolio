@@ -17,7 +17,7 @@
         <br><h6> ID: <%= project.id %></h6><br>
         <h6>Projeto: <%= project.title %></h6><br>
         <div class="row">
-          <%= link_to 'Show', project, class: "portfolio-btn" %>
+          <%= link_to 'Show', project, class: "portfolio-btn" , remote: true %>
           <%= link_to 'Edit', edit_project_path(project), class: "portfolio-btn" %>
           <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "portfolio-btn" %>
         </div>
