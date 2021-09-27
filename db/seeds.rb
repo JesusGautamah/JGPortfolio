@@ -10,7 +10,7 @@
 sections = [{title: 'Projects'},{title:  'Docs'},{title: 'Videos'},{title: 'Contact'}]
 email =  'admin@admin.com'
 user = {email: email, password: 'admin123456'}
-
+puts("Vars Initiated!")
 
 # Only create sections if the first section (Project in my case) dont exists
 unless Section.find_by(sections[0])
@@ -18,6 +18,7 @@ unless Section.find_by(sections[0])
     # For each section in sections, store section in database
     sections.each do |section|
         Section.create(section)
+        puts("Section Created!")
     end
 
 end
@@ -31,6 +32,16 @@ unless Project.find_by(title: "apenas um teste")
 
     50.times do
         Project.create(title: "apenas um teste", user_id: 1)
+        puts("Project Created!")
+    end
+
+end
+
+unless Article.find_by(title: "apenas um teste")
+
+    50.times do
+        Article.create(title: "apenas um teste", description: "testando", content: "teste", conclusion:"paragrafo", project_id: 1)
+        puts("Article Created!")
     end
     
 end

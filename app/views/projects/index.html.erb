@@ -5,17 +5,22 @@
 <div id="new-project">
   <%= link_to 'New Project', new_project_path, class:"portfolio-btn", remote: true %>
 </div>
+<br>
+<br>
+
 <%= pagy_bootstrap_nav(@pagy).html_safe %>
 <br>
 <br>
 
     <% @projects.each do |project| %>
       <div class="border-gradient border-gradient-purple text-center" id="hero-col" style="width: 50%; margin: 0 auto;" >
-        <h6><%= project.user %></h1>
-        <h6><%= project.title %></h1>
-        <h6><%= link_to 'Show', project %></h1>
-        <h6><%= link_to 'Edit', edit_project_path(project) %></h1>
-        <h6><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></h1>
+        <br><h6> ID: <%= project.id %></h6><br>
+        <h6>Projeto: <%= project.title %></h6><br>
+        <div class="row">
+          <%= link_to 'Show', project, class: "portfolio-btn" %>
+          <%= link_to 'Edit', edit_project_path(project), class: "portfolio-btn" %>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "portfolio-btn" %>
+        </div>
       </div>
       <br>
       <br>
