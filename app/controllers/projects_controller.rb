@@ -1,9 +1,13 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
-  before_action :authorize
+  before_action :authorize, except: %i[ public_view ]
 
   # GET /projects or /projects.json
   def index
+    @pagy, @projects = pagy(Project.all, max_items: 5)
+  end
+
+  def public_view
     @pagy, @projects = pagy(Project.all, max_items: 5)
   end
 

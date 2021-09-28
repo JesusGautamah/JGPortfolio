@@ -50,11 +50,12 @@
 
         
       <br>
-      <h1 style=" font-size: 24px;">Web Developer<br><br>Last 3 Working Projects</h1>
+      <h1 style=" font-size: 24px;">Web Developer</h1>
+      <h1 style=" font-size: 24px;">Last Working Projects</h1>
       <br>
-      <div class="container-fluid text-center">
+      <div class="container ">
 
-        <div class="row">
+        
           <% @projects.each do |project| %>
 
             <div class="portfolio-btn text-center" >
@@ -62,12 +63,65 @@
             </div>
 
           <% end %>
-        </div>
+        
 
       </div>
      
     
   </div>
+  <br>
+
+
+  <div class="container border-gradient border-gradient-purple text-center" id="main-col" >
+
+        
+      <br>
+      <h1 style=" font-size: 24px;">Youtube Channels</h1>
+      <h1 style=" font-size: 24px;">Last Videos</h1>
+      <br>
+      <div class="container">
+
+        
+          <% @projects.each do |project| %>
+
+            <div class="portfolio-btn text-center" >
+              <%= project.title %>
+            </div>
+
+          <% end %>
+       
+
+      </div>
+     
+    
+  </div>
+  <br>
+<div class="container border-gradient border-gradient-purple text-center" id="main-col" >
+
+        
+      <br>
+      <h1 style=" font-size: 24px;">Project Manager</h1>
+      <h1 style=" font-size: 24px;">Last Docs</h1>
+      <br>
+      
+
+        
+          <% @projects.each do |project| %>
+
+            <div class="portfolio-btn text-center">
+              <%= project.title %>
+            </div>
+
+          <% end %>
+       
+      
+     
+   
+  </div>
+  <br>
+  <br>
+  <br>
+
 
 
 
