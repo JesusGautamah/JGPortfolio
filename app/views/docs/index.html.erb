@@ -15,12 +15,12 @@
   <tbody>
     <% @docs.each do |doc| %>
       <tr>
-        <td><%= doc.project %></td>
+        <td><%= doc.project.title %></td>
         <td><%= doc.link %></td>
         <td><%= doc.title %></td>
-        <td><%= link_to 'Show', doc %></td>
-        <td><%= link_to 'Edit', edit_doc_path(doc) %></td>
-        <td><%= link_to 'Destroy', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', doc, class:"portfolio-btn", method: "get" %></td>
+        <td><%= button_to 'Edit', edit_doc_path(doc), class:"portfolio-btn", method: "get" %></td>
+        <td><%= button_to 'Destroy', doc, method: :delete, data: { confirm: 'Are you sure?' }, class:"portfolio-btn", method: "get" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Doc', new_doc_path %>
+<%= button_to 'New Doc', new_doc_path, method:"get", class:"portfolio-btn" %>
