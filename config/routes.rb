@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  
   resources :git_repositories
   resources :videos
   resources :articles
