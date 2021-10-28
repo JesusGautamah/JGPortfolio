@@ -1,5 +1,5 @@
 ## Jesus Gautamah's Ruby On Rails Portfolio
-## Outofdate... Development will resume soon!
+## Out of date... Development will resume soon!
 
 ### Edit exports.sh with your database (mysql) information
 
